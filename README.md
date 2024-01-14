@@ -8,6 +8,7 @@ Explore US Bikeshare Data
 
 ### Description
 Project investigates data of bike share systems in Chicago, New York City and Washington using Python.
+It computes different descriptive statistics to answer the questions about popular times of travel, popular stations, trip duration and information about bike users.
 
 ### Files used
 bikeshare.py
