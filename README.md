@@ -11,6 +11,7 @@ Project investigates data of bike share systems in Chicago, New York City and Wa
 It computes different descriptive statistics to answer the questions about popular times of travel, popular stations, trip duration and information about bike users.
 
 ### Files used
+### All .csv data files not included in the repository
 bikeshare.py
 chicago.csv
 new_york_city.csv
