@@ -20,7 +20,7 @@ def get_filters():
     cities = list(CITY_DATA.keys())
     city = ''
     while city not in cities:
-        city = input("Enter name of the city: Chicago, New York City or Washington.\n").lower()
+        city = input("Enter name of the city. You can explore data from Chicago, New York City or Washington.\n").lower()
         if city not in cities:
             print("There is not valid name of the city. \nTry: Chicago, New York City or Washington.\n")
 
