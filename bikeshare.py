@@ -22,8 +22,8 @@ def get_filters():
     while city not in cities:
         city = input("Enter name of the city: Chicago, New York City or Washington.\n").lower()
         if city not in cities:
-            print("There is not valid name of the city. \nTry: Chicago, New York City or Washington.\n") 
-       
+            print("There is not valid name of the city. \nTry: Chicago, New York City or Washington.\n")
+
 
     # TO DO: get user input for month (all, january, february, ... , june)
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
@@ -31,7 +31,7 @@ def get_filters():
     while month not in months:
         month = input("Enter name of month to filter by, or 'all' to apply no month filter.\n").lower()
         if month not in months:
-            print("There is not valid name of month. \nTry: all, january, february, ... , june ") 
+            print("There is not valid name of month. \nTry: all, january, february, ... , june ")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "All"]
@@ -39,7 +39,7 @@ def get_filters():
     while day not in days:
         day = input("Enter name of the day of week to filter by, or 'all' to apply no day filter.\n").title()
         if day not in days:
-            print("There is not valid name of the day of week. \nTry: all, Monday, Tuesday, ... Sunday ") 
+            print("There is not valid name of the day of week. \nTry: all, Monday, Tuesday, ... Sunday ")
 
     print('-'*40)
     return city, month, day
@@ -70,7 +70,7 @@ def load_data(city, month, day):
         # using the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
-    
+
         # filtering by month to create the new dataframe
         df = df[df['month'] == month]
     # filtering by day of week if applicable
@@ -121,8 +121,8 @@ def station_stats(df):
     print ("The most popular end station is: ",popular_end)
 
     # TO DO: display most frequent combination of start station and end station trip
-    start_end = df['Start Station'] + df['End Station']
-    print ("The most frequent combination of start station and end station trip is: ", start_end.mode()[0])
+    popular_start_end = df['Start Station'] + df['End Station']
+    print ("The most frequent combination of start station and end station trip is: ", popular_start_end.mode()[0])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -161,7 +161,7 @@ def user_stats(df):
         print("User gender: \n", gender)
     else:
         print('Gender stats cannot be calculated because Gender does not appear in the dataframe')
-        
+
     # TO DO: Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df:
         birth_year = df['Birth Year']
